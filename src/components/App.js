@@ -3,12 +3,12 @@ import AppRouter from 'components/Router';
 import { authService } from 'fbase'
 
 function App() {
-  // console.log(authService.currentUser);
+  console.log('auth? ',authService.currentUser);
   const [isLoggedIn, setIsLoggedIn] = useState(authService.currentUser);
   return (
     <div>
       <AppRouter isLoggedIn={isLoggedIn} />
-      <footer>&copy; Nwitter {new Date().getFullYear()}</footer>
+      <footer>&copy; {new Date().getFullYear()} Nwitter </footer>
     </div>
   );
 }
